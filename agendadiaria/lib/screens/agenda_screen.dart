@@ -35,7 +35,25 @@ class AgendaScreen extends StatelessWidget {
             const SizedBox(height: 12),
 
             // Selector de hijo
-            const ChildSelector(),
+            Row(
+              children: [
+                Expanded(
+                  child: const ChildSelector(),
+                ),
+                if (provider.selectedChildId != null)
+                  Padding(
+                    padding: const EdgeInsets.only(left: 12.0),
+                    child: CircleAvatar(
+                      radius: 30,
+                      backgroundImage: NetworkImage(
+                        provider.children
+                            .firstWhere((child) => child.id == provider.selectedChildId!)
+                            .imageUrl,
+                      ),
+                    ),
+                  ),
+              ],
+            ),
 
             const SizedBox(height: 16),
 
