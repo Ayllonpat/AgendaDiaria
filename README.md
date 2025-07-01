@@ -32,6 +32,7 @@ Agenda Diaria es una app educativa para que padres visualicen las actividades di
 Se incluye un test para la función getColorById que:
  - Verifica que dada una ID de hijo devuelve el color correcto asociado.
  - Garantiza que la lógica de asignación de colores por hijo funciona correctamente.
+   
 Para ejecutar los tests:
 
 ```bash
